@@ -113,7 +113,7 @@ $\Pi$-theorem, there are
 \begin{align*}
   p = n - k = 9 - 3 = 6
 \end{align*}
-dimensionless parameters that can be constructed from the original variables.
+dimensionless groups that can be constructed from the original variables.
 Two of the possible $\Pi$-groups are the Reynolds and Strouhal numbers. Using
 the nongeometrical parameters these can be written as
 \begin{align}
@@ -123,7 +123,24 @@ the nongeometrical parameters these can be written as
 \subsection{Expression for sinking velocity}
 
 \subsection{Lift and drag forces on a wing element}
+By the Kutta-Joukowski condition, for low angles of attack the lift is
+proportional to (with inviscid theory)
+\begin{align*}
+    L \sim \rho U^2 L \sin{\alpha}
+\end{align*}
+In our case the velocity is given by $U = \omega R$, which yields a lift
+\begin{align}
+  L \sim \rho \omega^2 R^2 L
+\end{align}
+This formula might be inaccurate because in the experiment, viscous effects
+created a trailing vortex. This is not accounted for by inviscid theory.
 
+From dimensional analysis a possible configuration for the drag force is
+\begin{align}
+  D \sim \rho R^2 U_V \cos{\phi}
+\end{align}
+where we have taken the cosine of $\phi$ because if $\phi \rightarrow 0$ the
+drag should increase and if $\phi \rightarrow \pi/2$ the drag should decrease. 
 \subsection{Moment on the seed}
 
 \section{Experiment method}
