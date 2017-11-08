@@ -1,0 +1,140 @@
+\documentclass[aps,reprint]{revtex4-1}
+% Engine-specific settings
+% Detect pdftex/xetex/luatex, and load appropriate font packages.
+% This is inspired by the approach in the iftex package.
+% pdftex:
+\ifx\pdfmatch\undefined
+\else
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+\fi
+% xetex:
+\ifx\XeTeXinterchartoks\undefined
+\else
+    \usepackage{fontspec}
+    \defaultfontfeatures{Ligatures=TeX}
+\fi
+% luatex:
+\ifx\directlua\undefined
+\else
+    \usepackage{fontspec}
+\fi
+% End engine-specific settings
+\usepackage[english]{babel}
+\usepackage{csquotes}
+% \usepackage[backend=biber, sortcites]{biblatex}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage[usenames,dvipsnames,svgnames, table]{xcolor}
+\usepackage[font={scriptsize}]{caption}
+\usepackage{amsmath} \usepackage{amsthm} \usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{tikz} \usepackage{float}
+\usepackage[procnames]{listings}
+\usepackage{pstool} \usepackage{pgfplots}
+\usepackage{wrapfig} \usepackage{graphicx} \usepackage{epstopdf}
+\usepackage{afterpage}
+\usepackage{physics}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{algorithm}
+\usepackage{microtype}
+\usepackage[noend]{algpseudocode}
+\usepackage{xcolor,colortbl}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{lipsum}
+% \usepackage{pythontex}
+% \usepackage{authblk}
+\usepackage{nth}
+\usepackage{siunitx}
+% \usepackage[toc,page]{appendix}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+% Custom commands
+\newcommand{\unit}[1]{\:\mathrm{#1}}
+\newcommand{\noref}[1]{\hyperref[#1]{\ref*{#1}}}
+\newcommand{\nonref}[1]{\hyperref[]{\ref*{#1}}}
+\newcommand\blankpage{%
+  \null
+  \thispagestyle{empty}%
+  \addtocounter{page}{-1}%
+  \newpage}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{7} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{7}  % for normal
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\columnwidth}{#1#2#3}}}
+\pgfplotsset{compat=1.14}
+
+
+% Biber for references
+% \bibliographystyle{aipauth4-1}
+
+\begin{document}
+\sisetup{detect-all}
+\title{Mimicking the flight of a Dipterocarpus fruit}
+\author{Magnus Holm}
+\author{Jonas G. S. Lunde}
+\author{Frederik J. Mellbye}
+\affiliation{University of Oslo, Oslo, Norway}
+\date{\today}
+
+\begin{abstract}
+Abstract abstract.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+\label{sec:introduction}
+See \cite{instruks} for a full introduction to this experiment. In the experiment
+3D models of Dipterocarpaceae fruit were developed in FreeCAD, 3D-printed and
+released in a water cylinder. The fruits are equipped with wings, which enables
+seed dispersion over vast distances. The seed flight was then assessed with a
+variety in important parameters such as fruit mass and wing curvature. Out of the
+specific models that were investigated, ideal parameters for maximizing fruit
+dispersion were determined.
+
+\section{Theory}
+\label{sec:theory}
+\subsection{Non-dimensional quantities. Reynolds and Strouhal numbers.}
+From the project description, there are nine physical variables which are based
+on the dimensions $M$ (mass), $L$ (length) and $T$ (time). By Buckingham's
+$\Pi$-theorem, there are
+\begin{align*}
+  p = n - k = 9 - 3 = 6
+\end{align*}
+dimensionless parameters that can be constructed from the original variables.
+Two of the possible $\Pi$-groups are the Reynolds and Strouhal numbers. Using
+the nongeometrical parameters these can be written as
+\begin{align}
+  Re &= \\
+  St &=
+\end{align}
+\subsection{Expression for sinking velocity}
+
+\subsection{Lift and drag forces on a wing element}
+
+\subsection{Moment on the seed}
+
+\section{Experiment method}
+\label{sec:method}
+\section{Results and discussion}
+\label{sec:results}
+Ddwadawd
+\bibliography{references}
+\blankpage
+\end{document}
+
+% Local Variables:
+% TeX-engine: luatex
+% End:
