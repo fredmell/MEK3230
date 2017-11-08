@@ -117,8 +117,8 @@ dimensionless groups that can be constructed from the original variables.
 Two of the possible $\Pi$-groups are the Reynolds and Strouhal numbers. Using
 the nongeometrical parameters these can be written as
 \begin{align}
-  Re &= \\
-  St &=
+  Re &= \frac{U_V L}{\nu}\\
+  St &= \frac{fL}{U} = \frac{\omega L}{2\pi U}
 \end{align}
 \subsection{Expression for sinking velocity}
 
@@ -128,6 +128,7 @@ proportional to (with inviscid theory)
 \begin{align*}
     L \sim \rho U^2 L \sin{\alpha}
 \end{align*}
+This expression was found in \cite{acheson}.
 In our case the velocity is given by $U = \omega R$, which yields a lift
 \begin{align}
   L \sim \rho \omega^2 R^2 L
@@ -140,12 +141,35 @@ From dimensional analysis a possible configuration for the drag force is
   D \sim \rho R^2 U_V \cos{\phi}
 \end{align}
 where we have taken the cosine of $\phi$ because if $\phi \rightarrow 0$ the
-drag should increase and if $\phi \rightarrow \pi/2$ the drag should decrease. 
+drag should increase and if $\phi \rightarrow \pi/2$ the drag should decrease.
+This drag expression is both dimensionally and intuitively pleasing.
 \subsection{Moment on the seed}
+When the moment is 0, there is no net torque on the seed. The pitch angle causes
+fluid to be pushed to one side of the wing, which exerts a torque on the wings.
+In turn, the higher rotational frequency increases lift and drag forces, as well
+as viscous no-slip forces which counter the rotation and applies an opposite
+torque. At some terminal velocity, the torques cancel out and the net moment is
+0.
 
+If the moment is 0 for a combination of vertical velocity $V_0$ and rotation
+frequency $f_0$, the moment remains 0 if these quantities are multiplied with
+some real constant $K$. This is because the Stouchal number remains constant,
+so the rotation profile is the same (in a scaled sense).
 \section{Experiment method}
+The seeds were released in an approximately two meter tall glass cylinder filled
+with water. This was repeaded twice for each combination of seed type and mass.
+A raising mechanism was available to allow for easy recovery of the falling
+seeds, except for a two mistakes in which the seeds were manually retreived with
+a stick from the bottom of the tank. The seed trajectories were measured with
+a web-camera for later analysis.
+
+Several python scripts handed out were used to analyze the videos. Quantities
+such as seed and wing positions (and hence rotation) over time were extracted
+from the videos.
 \label{sec:method}
 \section{Results and discussion}
+See figures ~\ref{fig:oppg1} and ~\ref{fig:oppg2} for results from the
+experiment.
 \begin{figure}
   \includegraphics[width=0.8\linewidth]{oppg1.png}
   \caption{
@@ -160,8 +184,13 @@ drag should increase and if $\phi \rightarrow \pi/2$ the drag should decrease.
     Strouhal number of the different seeds
   }
 \end{figure}
+The failed retrieval of the falling seeds caused the seed to lose some mass
+(some of the small lead balls fell out) during the extraction process. Although
+it is pretty certain the right amount of lead balls were added to the seed after
+this failure, there might have been some inaccuracies in the seed mass after that
+point. 
 \label{sec:results}
-Ddwadawd
+
 \bibliography{references}
 \blankpage
 \end{document}
