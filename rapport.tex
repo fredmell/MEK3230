@@ -121,6 +121,15 @@ the nongeometrical parameters these can be written as
   St &= \frac{fL}{U} = \frac{\omega L}{2\pi U}
 \end{align}
 \subsection{Expression for sinking velocity}
+One might make the faulty assumption that only a reduced set of parameters influence the sinking velocity of an object in a fluid. Using, for instance, only the accelecation of gravity $g$, the surface area of the object $A$, the mass of the object $m$, and it's sinking velocity, one might construct the dimentionless group
+\begin{align*}
+    \Pi_1 = \frac{U_v^4}{g^2A}
+\end{align*}
+giving the proportionality
+\begin{align*}
+    U_v \sim g^{1/2}A^{1/4}
+\end{align*}
+This is obviously nonsense, and demonstrates the limitations of dimensional analysis when a reduced set of parameters are mistakenly used.
 
 \subsection{Lift and drag forces on a wing element}
 By the Kutta-Joukowski condition, for low angles of attack the lift is
@@ -188,7 +197,7 @@ The failed retrieval of the falling seeds caused the seed to lose some mass
 (some of the small lead balls fell out) during the extraction process. Although
 it is pretty certain the right amount of lead balls were added to the seed after
 this failure, there might have been some inaccuracies in the seed mass after that
-point. 
+point.
 \label{sec:results}
 
 \bibliography{references}
