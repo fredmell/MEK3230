@@ -22,7 +22,7 @@
 % End engine-specific settings
 \usepackage[english]{babel}
 \usepackage{csquotes}
-% \usepackage[backend=biber, sortcites]{biblatex}
+% \usepackage[backend=bibtex, sortcites]{biblatex}
 \usepackage{url}
 \usepackage{textcomp}
 \usepackage[usenames,dvipsnames,svgnames, table]{xcolor}
@@ -78,7 +78,7 @@
 
 
 % Biber for references
-% \bibliographystyle{aipauth4-1}
+\bibliographystyle{aipauth4-1}
 
 \begin{document}
 \sisetup{detect-all}
@@ -89,14 +89,11 @@
 \affiliation{University of Oslo, Oslo, Norway}
 \date{\today}
 
-\begin{abstract}
-Abstract abstract.
-\end{abstract}
 \maketitle
 
 \section{Introduction}
 \label{sec:introduction}
-See \cite{instruks} for a full introduction to this experiment. In the experiment
+See the lab instructions for a full introduction to this experiment. In the experiment
 3D models of Dipterocarpaceae fruit were developed in FreeCAD, 3D-printed and
 released in a water cylinder. The fruits are equipped with wings, which enables
 seed dispersion over vast distances. The seed flight was then assessed with a
@@ -137,7 +134,7 @@ proportional to (with inviscid theory)
 \begin{align*}
     L \sim \rho U^2 L \sin{\alpha}
 \end{align*}
-This expression was found in \cite{acheson}.
+This expression was found in Acheson, in the chapter on classical aerofoil theory.
 In our case the velocity is given by $U = \omega R$, which yields a lift
 \begin{align}
   L \sim \rho \omega^2 R^2 L
@@ -153,6 +150,7 @@ where we have taken the cosine of $\phi$ because if $\phi \rightarrow 0$ the
 drag should increase and if $\phi \rightarrow \pi/2$ the drag should decrease.
 This drag expression is both dimensionally and intuitively pleasing.
 \subsection{Moment on the seed}
+\label{subsec:moment}
 When the moment is 0, there is no net torque on the seed. The pitch angle causes
 fluid to be pushed to one side of the wing, which exerts a torque on the wings.
 In turn, the higher rotational frequency increases lift and drag forces, as well
@@ -177,6 +175,7 @@ such as seed and wing positions (and hence rotation) over time were extracted
 from the videos.
 \label{sec:method}
 \section{Results and discussion}
+\label{sec:results}
 See figures ~\ref{fig:oppg1} and ~\ref{fig:oppg2} for results from the
 experiment.
 \begin{figure}
@@ -193,14 +192,35 @@ experiment.
     Strouhal number of the different seeds
   }
 \end{figure}
+\subsection{Falling velocity for multiple $\sqrt{W}$}
+From the results it is evident that seed A, which had the least bent wings
+had the largest vertical velocity. This is likely because the less angled wings
+combined with a smaller spanned area induces less drag and also lift on the
+seed. This is also as expected when compared to the expressions for drag and lift
+derived above.
+
+The more curved seeds have very similar profiles, however the one with the most
+curved wings edged slightly ahead. This is perhaps a bit surprising compared
+with theory.
+\subsection{Stouchal number for different masses}
+By inspection, the Stouchal number for different seeds is almost constant.
+Because both $\omega$ and $U_V$ depend on the mass and shape in approximately the same manner,
+the Stouchal number (relation of angular and translational velocity) is thus
+approximately constant for this type of flow. See the discussion in ~\ref{subsec:moment}.
+
+\subsection{Optimal seed configuration}
+In terms of determining an optimal configuration, seed B had the slowest descent
+and is therefore determined to be the optimal configuration. From the results
+it is also clear that the lower the mass, the lower the falling velocity, which
+allows the seeds to be carried further before they hit the ground. As a concluding
+remark based on the results, the lowest mass medium curved configuration had the
+optimal parameters for maximizing dispersion.
+\subsection{Possible error}
 The failed retrieval of the falling seeds caused the seed to lose some mass
 (some of the small lead balls fell out) during the extraction process. Although
-it is pretty certain the right amount of lead balls were added to the seed after
+it is pretty certain the right amount of lead balls were replaced after
 this failure, there might have been some inaccuracies in the seed mass after that
 point.
-\label{sec:results}
-
-\bibliography{references}
 \blankpage
 \end{document}
 
